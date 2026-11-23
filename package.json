@@ -1,5 +1,5 @@
 {
-  "name": "@voxgig/seneca-browser-debug",
+  "name": "@seneca/browser-debug",
   "version": "0.1.1",
   "description": "In-window debug devtools for Seneca in the browser: a resizable, hideable pop-up showing live message flows and config. Not a browser extension.",
   "main": "browser-debug.js",
@@ -22,15 +22,29 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/voxgig/seneca-browser-debug.git"
+    "url": "git+https://github.com/senecajs/seneca-browser-debug.git"
   },
   "author": "Richard Rodger",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/voxgig/seneca-browser-debug/issues"
+    "url": "https://github.com/senecajs/seneca-browser-debug/issues"
   },
-  "homepage": "https://github.com/voxgig/seneca-browser-debug#readme",
+  "homepage": "https://github.com/senecajs/seneca-browser-debug#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "peerDependencies": {
+    "@seneca/browser": "^8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@seneca/browser": {
+      "optional": true
+    }
+  },
   "devDependencies": {
-    "seneca-browser": "8.0.0-rc2"
+    "@seneca/browser": "^8.0.0"
   }
 }

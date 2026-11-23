@@ -1,4 +1,4 @@
-# Agent guide: @voxgig/seneca-browser-debug
+# Agent guide: @seneca/browser-debug
 
 In-window devtools panel for browser Seneca (message flows / config /
 store cache). Concepts: [README.md](README.md) + [docs/](docs/).
@@ -6,7 +6,7 @@ store cache). Concepts: [README.md](README.md) + [docs/](docs/).
 ## Commands
 
 ```bash
-npm test        # node:test (test/capture.test.js)
+npm test        # node:test (test/*.test.js)
 ```
 
 Plain JS, no build step: `browser-debug.js` is the source AND the shipped

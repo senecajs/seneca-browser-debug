@@ -1,7 +1,7 @@
 /* Copyright (c) 2026 Richard Rodger, MIT License. */
 
 /*
- * @voxgig/seneca-browser-debug
+ * @seneca/browser-debug
  *
  * A Seneca plugin that adds an in-window developer console for Seneca
  * running in the browser. It is NOT a browser extension - it injects a
@@ -21,7 +21,7 @@
  *   seneca.use(SenecaBrowserDebug, { remotePins: 'aim:*' })
  *
  * Usage (as an ESM/bundler import):
- *   import SenecaBrowserDebug from '@voxgig/seneca-browser-debug'
+ *   import SenecaBrowserDebug from '@seneca/browser-debug'
  *   seneca.use(SenecaBrowserDebug, { remotePins: 'aim:*' })
  */
 
@@ -186,7 +186,7 @@
       hide: function () {},
     }
 
-    // Loosely-coupled bridge to @voxgig/seneca-browser-store (if present): read and
+    // Loosely-coupled bridge to @seneca/browser-cache (if present): read and
     // clear its cache state tree. `get` yields null when no store plugin is
     // loaded (the action simply isn't found).
     const storeBridge = {
@@ -431,13 +431,7 @@
 
   function pluginList(seneca) {
     const out = []
-    let reg = null
-    if ('function' === typeof seneca.list_plugins) {
-      reg = seneca.list_plugins()
-    }
-    else if (seneca.plugins) {
-      reg = seneca.plugins()
-    }
+    const reg = seneca.list_plugins()
     if (!reg) {
       return out
     }
@@ -765,7 +759,7 @@
 
         if (!out) {
           wrap.appendChild(h('div', 'sbd-empty',
-            'No store plugin loaded. Add @voxgig/seneca-browser-store to cache queries.'))
+            'No store plugin loaded. Add @seneca/browser-cache to cache queries.'))
           body.appendChild(wrap)
           return
         }

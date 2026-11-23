@@ -7,7 +7,7 @@ through them.*
 
 ```js
 import Seneca from '@seneca/browser'
-import SenecaBrowserDebug from '@voxgig/seneca-browser-debug'
+import SenecaBrowserDebug from '@seneca/browser-debug'
 
 const seneca = Seneca({ legacy: false })
   .client({ type: 'browser', pin: 'aim:*' })
@@ -40,7 +40,7 @@ narrow by pattern; framework-internal messages are hidden by default.
 ## 4. Inspect config and state
 
 - **Config** — the resolved Seneca options and loaded plugins.
-- **Store** — if [`@voxgig/seneca-browser-store`](https://github.com/voxgig/seneca-browser-store)
+- **Store** — if [`@seneca/browser-cache`](https://github.com/senecajs/seneca-browser-cache)
   is loaded, the live cache as a tree (with a clear button). Perform a
   write in the app and watch the cached group update optimistically.
 
