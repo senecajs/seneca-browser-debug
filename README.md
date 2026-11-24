@@ -1,8 +1,8 @@
-# @voxgig/seneca-browser-debug
+# @seneca/browser-debug
 
 In-window developer devtools for [Seneca][] running in the browser — a
 resizable, draggable, hideable pop-up panel that shows live **message
-flows**, **config**, and (with [`@voxgig/seneca-browser-store`][browser-store])
+flows**, **config**, and (with [`@seneca/browser-cache`][browser-cache])
 the **store cache**. Similar in spirit to the Vue/React devtools but **not
 a browser extension**: it injects itself into the page, so it works on any
 device and any browser with no install.
@@ -12,14 +12,19 @@ It is a support plugin for [`@seneca/browser`][seneca-browser].
 ## Install
 
 ```sh
-npm install @voxgig/seneca-browser-debug
+npm install @seneca/browser @seneca/browser-debug
 ```
+
+The plugin runs inside the Seneca 4 that `@seneca/browser` 8 embeds.
+`@seneca/browser` is an optional peer dependency: install it, as above,
+when a bundler imports it, and leave it out when the page loads the
+bundle from a script tag or a vendored copy.
 
 ## Quick start
 
 ```js
 import Seneca from '@seneca/browser'
-import SenecaBrowserDebug from '@voxgig/seneca-browser-debug'
+import SenecaBrowserDebug from '@seneca/browser-debug'
 
 const seneca = Seneca({ legacy: false }).client({ type: 'browser', pin: 'aim:*' })
 
@@ -49,5 +54,5 @@ Working on this repo with an AI agent? See [AGENTS.md](AGENTS.md).
 MIT
 
 [Seneca]: https://senecajs.org
-[seneca-browser]: https://github.com/voxgig/seneca-browser
-[browser-store]: https://github.com/voxgig/seneca-browser-store
+[seneca-browser]: https://github.com/senecajs/seneca-browser
+[browser-cache]: https://github.com/senecajs/seneca-browser-cache

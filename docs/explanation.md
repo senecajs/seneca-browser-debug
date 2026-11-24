@@ -24,7 +24,7 @@ layout.
 
 ## Loose coupling to the store
 
-The **Store** tab talks to `@voxgig/seneca-browser-store` purely through
+The **Store** tab talks to `@seneca/browser-cache` purely through
 its public messages (`sys:browser-store,get:state` / `clear:store`). No
 import, no hard dependency: with the store absent the tab degrades to a
 notice. This is the same message-first philosophy as the rest of the

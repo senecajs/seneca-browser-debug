@@ -24,7 +24,7 @@ Tabs:
   request/response payloads. Pattern filter, hide-system toggle, pause,
   clear.
 - **Config** — resolved Seneca options + loaded plugins.
-- **Store** — the `@voxgig/seneca-browser-store` cache tree, when that
+- **Store** — the `@seneca/browser-cache` cache tree, when that
   plugin is present (loosely-coupled via its messages; the tab reports
   absence otherwise), with a clear-cache control.
 
